@@ -1,0 +1,6 @@
+framework module Pods_ArtableAdminTests {
+  umbrella header "Pods-ArtableAdminTests-umbrella.h"
+
+  export *
+  module * { export * }
+}
