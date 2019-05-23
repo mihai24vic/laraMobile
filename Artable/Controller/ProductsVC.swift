@@ -8,6 +8,8 @@
 
 import UIKit
 import FirebaseFirestore
+import Alamofire
+import SwiftyJson
 
 class ProductsVC: UIViewController {
 
@@ -17,6 +19,8 @@ class ProductsVC: UIViewController {
     //Variables
     var products = [Product]()
     var category: Category!
+    let LARA_URL = "http://www.stackwish.com/api.php/"
+    let params = "tbl_products"
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,10 +33,14 @@ class ProductsVC: UIViewController {
         tableView.dataSource = self
         tableView.register(UINib(nibName: Identifiers.ProductCell, bundle: nil), forCellReuseIdentifier: Identifiers.ProductCell)
         
-
+        getProductsData(url: LARA_URL, parameters: params)
         // Do any additional setup after loading the view.
     }
     
+    
+    func getProductsData(url : String, parameters : String){
+         Alamofire.
+    }
 
 }
 

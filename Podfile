@@ -11,6 +11,7 @@ def sharedPods
     pod 'Kingfisher', '~> 4.0'
     pod 'CodableFirebase'
     pod 'Firebase'
+    pod 'SwiftyJSON'
 
 end
 
