@@ -83,4 +83,14 @@ class RegisterVC : UIViewController{
     }
     
     
+    @IBAction func backToStoreFromRegister(_ sender: Any) {
+        presentMainController()
+    }
+    
+    fileprivate func presentMainController(){
+        let storyBoard = UIStoryboard(name: "Main", bundle: nil)
+        let controller = storyBoard.instantiateViewController(withIdentifier: "tabView")
+        present(controller, animated: true, completion: nil)
+    }
+    
 }
