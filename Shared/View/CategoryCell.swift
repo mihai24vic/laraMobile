@@ -24,8 +24,11 @@ class CategoryCell: UICollectionViewCell {
     
     func configureCell(category: Category){
         categoryLabel.text = category.name
-        if let url = URL (string: category.imagUrl){
-            categoryImg.kf.setImage(with: url)
+        if let url = URL(string: category.imagUrl){
+            let placeholder = UIImage(named: "placeholder")
+             categoryImg.kf.indicatorType = .activity
+            categoryImg.kf.setImage(with: url, placeholder: placeholder)
+           
         }
     }
 

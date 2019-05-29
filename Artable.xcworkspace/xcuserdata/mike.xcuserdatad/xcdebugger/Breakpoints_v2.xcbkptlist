@@ -35,5 +35,69 @@
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Artable/Controller/ProductsVC.swift"
+            timestampString = "580516969.65971"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "43"
+            endingLineNumber = "43"
+            landmarkName = "unknown"
+            landmarkType = "0">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Artable.ProductsVC.getProductsData(url: Swift.String, parameters: Swift.Dictionary&lt;Swift.String, Swift.String&gt;) -&gt; ()"
+                  moduleName = "Artable"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/mike/laraMobile/Artable/Controller/ProductsVC.swift"
+                  timestampString = "580425556.398597"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "42"
+                  endingLineNumber = "42"
+                  offsetFromSymbolStart = "156">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Alamofire.DataResponse&lt;Any&gt;) -&gt; () in Artable.ProductsVC.getProductsData(url: Swift.String, parameters: Swift.Dictionary&lt;Swift.String, Swift.String&gt;) -&gt; ()"
+                  moduleName = "Artable"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/mike/laraMobile/Artable/Controller/ProductsVC.swift"
+                  timestampString = "580425556.4067889"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "44"
+                  endingLineNumber = "44"
+                  offsetFromSymbolStart = "84">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Artable/Controller/ProductsVC.swift"
+            timestampString = "580516969.6600879"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "57"
+            endingLineNumber = "57"
+            landmarkName = "unknown"
+            landmarkType = "0">
+         </BreakpointContent>
+      </BreakpointProxy>
    </Breakpoints>
 </Bucket>

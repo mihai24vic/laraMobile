@@ -28,6 +28,7 @@ class ProductCell: UITableViewCell {
         if let url = URL(string: product.imageURL){
             productImage.kf.setImage(with: url)
         }
+        productPrice.text = String(product.price)
         
         
     }
