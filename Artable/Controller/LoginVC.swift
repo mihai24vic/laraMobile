@@ -19,6 +19,13 @@ class LoginVC: UIViewController {
     @IBAction func forgotPassClicked(_ sender: Any) {
     }
     
+    @IBAction func backToStore(_ sender: Any) {
+        presentMainController()
+    }
+    
+    @IBAction func backToStoreAsAGuest(_ sender: Any) {
+        presentMainController()
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -41,6 +48,9 @@ class LoginVC: UIViewController {
         }
     }
     
-    @IBAction func questCliked(_ sender: Any) {
+    fileprivate func presentMainController(){
+        let storyBoard = UIStoryboard(name: "Main", bundle: nil)
+        let controller = storyBoard.instantiateViewController(withIdentifier: "tabView")
+        present(controller, animated: true, completion: nil)
     }
 }

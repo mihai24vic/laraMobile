@@ -40,6 +40,7 @@ class HomeVC: UIViewController {
                 }
             }
         }
+        presentLoginController()
 
     }
 
