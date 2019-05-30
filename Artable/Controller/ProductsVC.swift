@@ -10,25 +10,29 @@ import UIKit
 import FirebaseFirestore
 import Alamofire
 import SwiftyJSON
+import AVFoundation
 
 class ProductsVC: UIViewController {
 
     //Outlets
     @IBOutlet weak var tableView: UITableView!
     
+   // @IBOutlet weak var menuButton: UIBarButtonItem!
+    
     //Variables
     var products = [Product]()
     var category: Category!
     let LARA_URL = "http://stackwish.com/api.php/table=tbl_products"
     let params = ["table":"tbl_products"]
+    var productImageUrl = "https://laramobile.ro/pics/264/3r.jpg"
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        //sideMenu()
+//        let product = Product.init(name: "IOS APP", id: "hgvkhgf", category: "Applications", price: 33, productDescription: "Someting nice to do in the weekends", imageURL: "https://images.unsplash.com/photo-1514873684739-6847b4301185?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1328&q=80", timesStamp: Timestamp(), stock: 0, favorite: false)
+//
         
-        let product = Product.init(name: "IOS APP", id: "hgvkhgf", category: "Applications", price: 33, productDescription: "Someting nice to do in the weekends", imageURL: "https://images.unsplash.com/photo-1514873684739-6847b4301185?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1328&q=80", timesStamp: Timestamp(), stock: 0, favorite: false)
- 
-        
-        products.append(product)
+        //products.append(product)
         
         tableView.delegate = self
         tableView.dataSource = self
@@ -56,15 +60,15 @@ class ProductsVC: UIViewController {
     
     func updateProductsWithData(json : JSON ){
         
-        for (key, value ) in json {
-            let product = Product.init(name: "\(value["name_prd"])", id: "hgvkhgf", category: "Applications", price: Double("\(value["pret_sortare"])")!, productDescription: "Someting nice to do in the weekends", imageURL: "https://images.unsplash.com/photo-1514873684739-6847b4301185?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1328&q=80", timesStamp: Timestamp(), stock: 0, favorite: false)
+        for (_, value ) in json {
+            
+            let pictureArray = "\(value["poze"])"
+            let pictureNumber = pictureArray.components(separatedBy: ",").first
+            
+            let product = Product.init(name: "\(value["name_prd"])", id: "\(value["id_prd"])", category: "Applications", price: Double("\(value["pret_sortare"])")!, productDescription: "\(value["short_description_prd"])", imageURL: "https://laramobile.ro/pics/\(value["id_prd"])/\(pictureNumber ?? "1")r.jpg", timesStamp: Timestamp(), stock: 0, favorite: false)
             
             self.products.append(product)
         }
-        
-        
-        
-        //print("\(json[22]["name_prd"]) *************************")
         
         self.tableView.reloadData()
         //tableView.delegate = self
@@ -99,4 +103,14 @@ extension ProductsVC : UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 200
     }
+    
+//    func sideMenu(){
+//        if revealViewController() != nil {
+//            menuButton.target = revealViewController()
+//            menuButton.action = #selector(SWRevealViewController.revealToggle(_:))
+//            revealViewController()?.rearViewRevealWidth = 280
+//
+//            view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
+//        }
+   //}
 }

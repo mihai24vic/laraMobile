@@ -15,6 +15,7 @@
 		271DE317227F87B4009BF446 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 271DE316227F87B4009BF446 /* LoginVC.swift */; };
 		271DE31B2280D5EB009BF446 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 271DE31A2280D5EB009BF446 /* Extensions.swift */; };
 		271DE31D22822217009BF446 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 271DE31C22822217009BF446 /* Constants.swift */; };
+		278119C5229F2E2000631389 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 278119C4229F2E2000631389 /* SWRevealViewController.m */; };
 		27A46A5A226D147900298581 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27A46A59226D147900298581 /* AppDelegate.swift */; };
 		27A46A5C226D147900298581 /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27A46A5B226D147900298581 /* HomeVC.swift */; };
 		27A46A5F226D147900298581 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 27A46A5D226D147900298581 /* Main.storyboard */; };
@@ -92,6 +93,9 @@
 		271DE316227F87B4009BF446 /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
 		271DE31A2280D5EB009BF446 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		271DE31C22822217009BF446 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		278119C2229F2E1F00631389 /* Artable-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Artable-Bridging-Header.h"; sourceTree = "<group>"; };
+		278119C3229F2E2000631389 /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWRevealViewController.h; sourceTree = "<group>"; };
+		278119C4229F2E2000631389 /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
 		27A46A56226D147900298581 /* Artable.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Artable.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		27A46A59226D147900298581 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		27A46A5B226D147900298581 /* HomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
@@ -288,7 +292,10 @@
 				271DE310227F86CA009BF446 /* Controller */,
 				271DE313227F870A009BF446 /* Storyboards */,
 				271DE2CE227B8E2A009BF446 /* GoogleService-Info.plist */,
+				278119C3229F2E2000631389 /* SWRevealViewController.h */,
+				278119C4229F2E2000631389 /* SWRevealViewController.m */,
 				27A46A65226D147D00298581 /* Info.plist */,
+				278119C2229F2E1F00631389 /* Artable-Bridging-Header.h */,
 			);
 			path = Artable;
 			sourceTree = "<group>";
@@ -524,6 +531,7 @@
 				TargetAttributes = {
 					27A46A55226D147900298581 = {
 						CreatedOnToolsVersion = 10.2.1;
+						LastSwiftMigration = 1020;
 					};
 					27A46A69226D147D00298581 = {
 						CreatedOnToolsVersion = 10.2.1;
@@ -842,6 +850,7 @@
 				271DE317227F87B4009BF446 /* LoginVC.swift in Sources */,
 				27DA96AB2289F6F100080930 /* Product.swift in Sources */,
 				27A95BA0228226AA00BD0985 /* RoundedViews.swift in Sources */,
+				278119C5229F2E2000631389 /* SWRevealViewController.m in Sources */,
 				27DA96A52288BDAE00080930 /* CategoryCell.swift in Sources */,
 				27A46A5A226D147900298581 /* AppDelegate.swift in Sources */,
 				27DA96AE2289F7BA00080930 /* ProductCell.swift in Sources */,
@@ -1074,6 +1083,7 @@
 			baseConfigurationReference = 23D96981D9AF9BCD80F27D8B /* Pods-Artable.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = NPNP8K3L46;
 				INFOPLIST_FILE = Artable/Info.plist;
@@ -1083,6 +1093,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = xyz.m12000.Artable;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Artable/Artable-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -1093,6 +1105,7 @@
 			baseConfigurationReference = 8B88D6D5590E6B026ABB2A30 /* Pods-Artable.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = NPNP8K3L46;
 				INFOPLIST_FILE = Artable/Info.plist;
@@ -1102,6 +1115,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = xyz.m12000.Artable;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Artable/Artable-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
