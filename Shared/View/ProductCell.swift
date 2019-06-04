@@ -34,7 +34,9 @@ class ProductCell: UITableViewCell {
     }
     
     @IBAction func addToCartClicked(_ sender: Any) {
+        
     }
     @IBAction func favoriteClicked(_ sender: Any) {
+        
     }
 }
