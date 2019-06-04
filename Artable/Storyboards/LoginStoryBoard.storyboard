@@ -44,7 +44,7 @@
                                         <rect key="frame" x="0.0" y="120.5" width="374" height="30"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
+                                        <textInputTraits key="textInputTraits" textContentType="password"/>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mFQ-oC-RqW">
                                         <rect key="frame" x="0.0" y="185.5" width="374" height="35"/>
@@ -65,6 +65,9 @@
                                         </state>
                                         <connections>
                                             <action selector="loginClicked:" destination="AjU-Rd-dPA" eventType="touchUpInside" id="dkK-us-Q75"/>
+                                            <segue destination="bcz-vw-XoN" kind="popoverPresentation" popoverAnchorView="9rC-RT-4Lz" id="tri-X1-SGZ">
+                                                <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
+                                            </segue>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N6U-L6-gCo">
@@ -84,7 +87,7 @@
                                 </subviews>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J9Q-Qh-lNC" customClass="RoundedButton" customModule="Artable" customModuleProvider="target">
-                                <rect key="frame" x="20" y="639" width="374" height="35"/>
+                                <rect key="frame" x="20" y="778" width="374" height="35"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.77613710729999996" green="0.048169373270000003" blue="0.098457945749999998" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="17"/>
@@ -96,13 +99,6 @@
                                     <action selector="loginClicked:" destination="AjU-Rd-dPA" eventType="touchUpInside" id="GpM-Jg-c7i"/>
                                 </connections>
                             </button>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="USA-gM-LyX">
-                                <rect key="frame" x="108" y="521" width="253" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="textColor" red="0.77613710729999996" green="0.048169373270000003" blue="0.098457945749999998" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -116,7 +112,6 @@
                     <connections>
                         <outlet property="acitivityIndicator" destination="yXN-Aq-5vQ" id="O2p-vg-UEh"/>
                         <outlet property="emailTxt" destination="apT-a0-5dP" id="Vxg-HL-Ob5"/>
-                        <outlet property="labelError" destination="USA-gM-LyX" id="nQE-Na-63Y"/>
                         <outlet property="passwordTxt" destination="8E8-64-Ttt" id="nem-EG-O5M"/>
                     </connections>
                 </viewController>
@@ -206,7 +201,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="obF-e0-Jng" customClass="RoundedButton" customModule="Artable" customModuleProvider="target">
-                                <rect key="frame" x="20" y="638" width="374" height="35"/>
+                                <rect key="frame" x="20" y="780" width="374" height="35"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.77613710729999996" green="0.048169373270000003" blue="0.098457945749999998" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="17"/>
@@ -267,4 +262,7 @@
     <resources>
         <image name="red_check" width="40" height="40"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="9Ml-UL-9hr"/>
+    </inferredMetricsTieBreakers>
 </document>
