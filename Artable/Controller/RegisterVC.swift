@@ -76,6 +76,9 @@ class RegisterVC : UIViewController{
                 return
             }
             
+        
+//            guard let dbUser = "ddd" else { return }
+//            let laraUser = User.init(id: dbUser.Id, email: dbUser.email, username: dbUser.username, stripeId: dbUser.stripeId)
             
             self.activityIndicator.stopAnimating()
             self.dismiss(animated: true, completion: nil)
