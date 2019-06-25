@@ -356,6 +356,28 @@
             </objects>
             <point key="canvasLocation" x="390" y="-1128"/>
         </scene>
+        <!--Item-->
+        <scene sceneID="xn7-r6-l6U">
+            <objects>
+                <viewController storyboardIdentifier="LoggedUser" id="tDE-Eh-r5p" customClass="LoggedUserViewController" customModule="Artable" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="pZI-7g-sTA">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="user_male" translatesAutoresizingMaskIntoConstraints="NO" id="T3e-4h-J9O">
+                                <rect key="frame" x="87" y="215" width="240" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="xkk-TY-yTW"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Item" id="MWl-nN-Cgf"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ipx-Cu-XBQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1242" y="-702"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="QcI-qE-bTw">
             <objects>

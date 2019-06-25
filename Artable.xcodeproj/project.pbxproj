@@ -15,6 +15,7 @@
 		271DE317227F87B4009BF446 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 271DE316227F87B4009BF446 /* LoginVC.swift */; };
 		271DE31B2280D5EB009BF446 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 271DE31A2280D5EB009BF446 /* Extensions.swift */; };
 		271DE31D22822217009BF446 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 271DE31C22822217009BF446 /* Constants.swift */; };
+		27235DF422B2F5D800A880EA /* LoggedUserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27235DF322B2F5D800A880EA /* LoggedUserViewController.swift */; };
 		278119C5229F2E2000631389 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 278119C4229F2E2000631389 /* SWRevealViewController.m */; };
 		278119CB22A5A38E00631389 /* ProductDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 278119C922A5A38E00631389 /* ProductDetailVC.swift */; };
 		278119CC22A5A38E00631389 /* ProductDetailVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 278119CA22A5A38E00631389 /* ProductDetailVC.xib */; };
@@ -96,6 +97,7 @@
 		271DE316227F87B4009BF446 /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
 		271DE31A2280D5EB009BF446 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		271DE31C22822217009BF446 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		27235DF322B2F5D800A880EA /* LoggedUserViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LoggedUserViewController.swift; path = ../../../Downloads/LoggedUserViewController.swift; sourceTree = "<group>"; };
 		278119C2229F2E1F00631389 /* Artable-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Artable-Bridging-Header.h"; sourceTree = "<group>"; };
 		278119C3229F2E2000631389 /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWRevealViewController.h; sourceTree = "<group>"; };
 		278119C4229F2E2000631389 /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
@@ -207,6 +209,7 @@
 		271DE310227F86CA009BF446 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				27235DF322B2F5D800A880EA /* LoggedUserViewController.swift */,
 				27A46A59226D147900298581 /* AppDelegate.swift */,
 				27A46A5B226D147900298581 /* HomeVC.swift */,
 				27DA96A82289F67900080930 /* ProductsVC.swift */,
@@ -875,6 +878,7 @@
 				27A46A5A226D147900298581 /* AppDelegate.swift in Sources */,
 				27DA96AE2289F7BA00080930 /* ProductCell.swift in Sources */,
 				271DE31D22822217009BF446 /* Constants.swift in Sources */,
+				27235DF422B2F5D800A880EA /* LoggedUserViewController.swift in Sources */,
 				27DA969C2288AC3D00080930 /* Category.swift in Sources */,
 				8878F927229F23A900B2CF4E /* TabControllerViewController.swift in Sources */,
 			);
