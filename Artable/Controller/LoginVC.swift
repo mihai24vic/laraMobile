@@ -23,7 +23,8 @@ class LoginVC: UIViewController {
     @IBOutlet weak var emailTxt: UITextField!
     @IBOutlet weak var passwordTxt: UITextField!
     
-    @IBOutlet weak var labelError: UITextField!
+
+    @IBOutlet weak var labelError: UILabel!
     
     @IBOutlet weak var acitivityIndicator: UIActivityIndicatorView!
     @IBAction func forgotPassClicked(_ sender: Any) {
@@ -42,11 +43,8 @@ class LoginVC: UIViewController {
         
         print("*************  \(String(describing: defaultValues.string(forKey: "username")))")
         
-        if defaultValues.string(forKey: "username") != nil{
-            print("9999999999")
-            print(defaultValues.string(forKey: "username")!)
-            
-            
+        if defaultValues.string(forKey: "username") != ""{
+          
             let storyBoard = UIStoryboard(name: "Main", bundle: nil)
             let controller = storyBoard.instantiateViewController(withIdentifier: "LoggedUser")
             present(controller, animated: true, completion: nil)
@@ -55,6 +53,7 @@ class LoginVC: UIViewController {
     }
     
     @IBAction func loginClicked(_ sender: Any) {
+        print("test login clicked")
         //        guard let email = emailTxt.text , email.isNotEmpty,
         //            let password = passwordTxt.text , password.isNotEmpty else {return}
         //

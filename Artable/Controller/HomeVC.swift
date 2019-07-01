@@ -13,61 +13,80 @@ class HomeVC: UIViewController {
 
     //Outlets
     
-    @IBOutlet weak var loginOutBtn: UIBarButtonItem!
+//    @IBAction func logoutButtonPressed(_ sender: Any) {
+//        let domain = Bundle.main.bundleIdentifier!
+//        UserDefaults.standard.removePersistentDomain(forName: domain)
+//        UserDefaults.standard.synchronize()
+//
+//        presentLoginController()
+//    }
     
-    @IBOutlet weak var collectionView: UICollectionView!
-    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
+    
+   // @IBOutlet weak var loginOutBtn: UIBarButtonItem!
+    
+   // @IBOutlet weak var collectionView: UICollectionView!
+  //  @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     
     //variables
+    let defaultValues = UserDefaults.standard
     var categegories = [Category]()
     var selectedCategory : Category!
+    
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let category =  Category.init(name: "nature", id: "sdafas", imagUrl:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTSyR4mVKtGxzE-wYnL01KLLq1E-X0nb9O2wRo2kKXqeQG4dWvs", isActive: true, timeStamp: Timestamp())
         
-        categegories.append(category)
+            let storyBoard = UIStoryboard(name: "Main", bundle: nil)
+            let controller = storyBoard.instantiateViewController(withIdentifier: "LoggedUser")
+            present(controller, animated: true, completion: nil)
         
-        collectionView.delegate = self
-        collectionView.dataSource = self
-        collectionView.register(UINib(nibName: Identifiers.CategoryCell, bundle: nil), forCellWithReuseIdentifier: Identifiers.CategoryCell)
+        
+        
+//        let category =  Category.init(name: "nature", id: "sdafas", imagUrl:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTSyR4mVKtGxzE-wYnL01KLLq1E-X0nb9O2wRo2kKXqeQG4dWvs", isActive: true, timeStamp: Timestamp())
+//
+//        categegories.append(category)
+//
+//        collectionView.delegate = self
+//        collectionView.dataSource = self
+//        collectionView.register(UINib(nibName: Identifiers.CategoryCell, bundle: nil), forCellWithReuseIdentifier: Identifiers.CategoryCell)
         // Do any additional setup after loading the view.
-        if Auth.auth().currentUser == nil {
-            Auth.auth().signInAnonymously{
-                (result, error) in if let error = error {
-                    debugPrint(error)
-                }
-            }
-        }
-        presentLoginController()
+      
+        //
 
     }
 
     override func viewDidAppear(_ animated: Bool) {
         
     }
-    @IBAction func loginOutCliked(_ sender: Any) {
-        if let _ = Auth.auth().currentUser{
-            //we are logged in
-            loginOutBtn.title = "Logout"
-            do {
-                //try Auth.auth().signOut()
-                presentLoginController()
-            }catch{
-                debugPrint(error.localizedDescription)
-            }
-        }else{
-            loginOutBtn.title = "Log In"
-            presentLoginController()
-        }
-    }
+    
+//    @IBAction func loginOutCliked(_ sender: Any) {
+//        if let _ = Auth.auth().currentUser{
+//            //we are logged in
+//            loginOutBtn.title = "Logout"
+//            do {
+//                presentLoginController()
+//            }catch{
+//                debugPrint(error.localizedDescription)
+//            }
+//        }else{
+//            loginOutBtn.title = "Log In"
+//            presentLoginController()
+//        }
+//    }
     
     fileprivate func presentLoginController(){
         let storyBoard = UIStoryboard(name: "LoginStoryBoard", bundle: nil)
         let controller = storyBoard.instantiateViewController(withIdentifier: "logingVC")
         present(controller, animated: true, completion: nil)
     }
+    
+//    fileprivate func presentFavoriteController(){
+//        let storyBoard = UIStoryboard(name: "LoginStoryBoard", bundle: nil)
+//        let controller = storyBoard.instantiateViewController(withIdentifier: "logingVC")
+//        present(controller, animated: true, completion: nil)
+//    }
     
 
 }
