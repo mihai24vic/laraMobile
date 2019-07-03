@@ -99,6 +99,13 @@
                                     <action selector="loginClicked:" destination="AjU-Rd-dPA" eventType="touchUpInside" id="GpM-Jg-c7i"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YIG-KW-SDo">
+                                <rect key="frame" x="186" y="588" width="0.0" height="0.0"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -112,6 +119,7 @@
                     <connections>
                         <outlet property="acitivityIndicator" destination="yXN-Aq-5vQ" id="O2p-vg-UEh"/>
                         <outlet property="emailTxt" destination="apT-a0-5dP" id="Vxg-HL-Ob5"/>
+                        <outlet property="labelError" destination="YIG-KW-SDo" id="qvi-AJ-r7F"/>
                         <outlet property="passwordTxt" destination="8E8-64-Ttt" id="nem-EG-O5M"/>
                     </connections>
                 </viewController>
@@ -263,6 +271,6 @@
         <image name="red_check" width="40" height="40"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="9Ml-UL-9hr"/>
+        <segue reference="tri-X1-SGZ"/>
     </inferredMetricsTieBreakers>
 </document>
