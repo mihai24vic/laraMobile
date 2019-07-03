@@ -47,6 +47,7 @@
 		27DA96AB2289F6F100080930 /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27DA96AA2289F6F100080930 /* Product.swift */; };
 		27DA96AE2289F7BA00080930 /* ProductCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27DA96AC2289F7BA00080930 /* ProductCell.swift */; };
 		27DA96AF2289F7BA00080930 /* ProductCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 27DA96AD2289F7BA00080930 /* ProductCell.xib */; };
+		27FB791522CAA1A700875404 /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27FB791422CAA1A700875404 /* UserService.swift */; };
 		48931EA8A24F7E75F8ABC46D /* Pods_ArtableAdmin.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CC214F8FB5BD804AD7DE7952 /* Pods_ArtableAdmin.framework */; };
 		68469E582F3FDC7B796AF8BA /* Pods_Artable.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A1A429280ADB21E94B1E60CB /* Pods_Artable.framework */; };
 		72DEDBBDB981FB1E1F7DDCE3 /* Pods_ArtableUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0F852722147397034B1E2CA7 /* Pods_ArtableUITests.framework */; };
@@ -138,6 +139,7 @@
 		27DA96AA2289F6F100080930 /* Product.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
 		27DA96AC2289F7BA00080930 /* ProductCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCell.swift; sourceTree = "<group>"; };
 		27DA96AD2289F7BA00080930 /* ProductCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProductCell.xib; sourceTree = "<group>"; };
+		27FB791422CAA1A700875404 /* UserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
 		8878F926229F23A900B2CF4E /* TabControllerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabControllerViewController.swift; sourceTree = "<group>"; };
 		8B88D6D5590E6B026ABB2A30 /* Pods-Artable.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Artable.release.xcconfig"; path = "Pods/Target Support Files/Pods-Artable/Pods-Artable.release.xcconfig"; sourceTree = "<group>"; };
 		9C3A708CB70B7FA82E0AA6D5 /* Pods-ArtableAdminTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ArtableAdminTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ArtableAdminTests/Pods-ArtableAdminTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -247,13 +249,13 @@
 			path = Storyboards;
 			sourceTree = "<group>";
 		};
-		271DE3192280D5D1009BF446 /* New Group */ = {
+		271DE3192280D5D1009BF446 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
 				271DE31A2280D5EB009BF446 /* Extensions.swift */,
 				271DE31C22822217009BF446 /* Constants.swift */,
 			);
-			path = "New Group";
+			path = Utils;
 			sourceTree = "<group>";
 		};
 		271DE31E228224D0009BF446 /* View */ = {
@@ -266,13 +268,13 @@
 			path = View;
 			sourceTree = "<group>";
 		};
-		278119C822A5A35F00631389 /* New Group */ = {
+		278119C822A5A35F00631389 /* Xibs */ = {
 			isa = PBXGroup;
 			children = (
 				278119C922A5A38E00631389 /* ProductDetailVC.swift */,
 				278119CA22A5A38E00631389 /* ProductDetailVC.xib */,
 			);
-			path = "New Group";
+			path = Xibs;
 			sourceTree = "<group>";
 		};
 		27A46A4D226D147900298581 = {
@@ -307,7 +309,8 @@
 		27A46A58226D147900298581 /* Artable */ = {
 			isa = PBXGroup;
 			children = (
-				278119C822A5A35F00631389 /* New Group */,
+				27FB791322CAA14600875404 /* Services */,
+				278119C822A5A35F00631389 /* Xibs */,
 				271DE311227F86DA009BF446 /* View */,
 				271DE310227F86CA009BF446 /* Controller */,
 				271DE313227F870A009BF446 /* Storyboards */,
@@ -375,7 +378,7 @@
 				27DA96A72288BE4200080930 /* New Group1 */,
 				271DE312227F86E3009BF446 /* Model */,
 				271DE31E228224D0009BF446 /* View */,
-				271DE3192280D5D1009BF446 /* New Group */,
+				271DE3192280D5D1009BF446 /* Utils */,
 				27A46A60226D147D00298581 /* Assets.xcassets */,
 			);
 			path = Shared;
@@ -388,6 +391,14 @@
 				27DA96AD2289F7BA00080930 /* ProductCell.xib */,
 			);
 			path = "New Group1";
+			sourceTree = "<group>";
+		};
+		27FB791322CAA14600875404 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				27FB791422CAA1A700875404 /* UserService.swift */,
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 		2FDAD8AF9AF1E9ABC25CFD30 /* Pods */ = {
@@ -866,6 +877,7 @@
 			files = (
 				27DA96A92289F67900080930 /* ProductsVC.swift in Sources */,
 				278119CB22A5A38E00631389 /* ProductDetailVC.swift in Sources */,
+				27FB791522CAA1A700875404 /* UserService.swift in Sources */,
 				271DE31B2280D5EB009BF446 /* Extensions.swift in Sources */,
 				271DE315227F87A5009BF446 /* RegisterVC.swift in Sources */,
 				278119CE22A704B600631389 /* User.swift in Sources */,

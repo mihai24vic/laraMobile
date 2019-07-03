@@ -92,7 +92,7 @@ class LoginVC: UIViewController {
                         let user = jsonData.value(forKey: "user") as! NSDictionary
                         
                         //getting user values
-                        let userId = user.value(forKey: "id") as! Int
+                        let userId = user.value(forKey: "id") as! String
                         let userName = user.value(forKey: "username") as! String
                         let userEmail = user.value(forKey: "email") as! String
                         
@@ -100,6 +100,10 @@ class LoginVC: UIViewController {
                         self.defaultValues.set(userId, forKey: "userid")
                         self.defaultValues.set(userName, forKey: "username")
                         self.defaultValues.set(userEmail, forKey: "useremail")
+                        
+                      let laraUser = User.init(id: userId, email: userEmail, username: userName, stripeId: "")
+                        
+                        UserService.getCurrentUser()
                         
                         self.presentMainController()
                         

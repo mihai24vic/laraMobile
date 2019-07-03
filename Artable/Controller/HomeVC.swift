@@ -31,16 +31,24 @@ class HomeVC: UIViewController {
     let defaultValues = UserDefaults.standard
     var categegories = [Category]()
     var selectedCategory : Category!
+
     
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
-            let storyBoard = UIStoryboard(name: "Main", bundle: nil)
-            let controller = storyBoard.instantiateViewController(withIdentifier: "LoggedUser")
-            present(controller, animated: true, completion: nil)
+        if defaultValues.string(forKey: "username") != nil {
+            
+            presentLoggedUserVC()
+            print("SHOW LOGIN ************")
+        }else{
+            presentLoginController()
+            print("**************SHOUW LOGHED USER")
+        }
+//            let storyBoard = UIStoryboard(name: "Main", bundle: nil)
+//            let controller = storyBoard.instantiateViewController(withIdentifier: "LoggedUser")
+//            present(controller, animated: true, completion: nil)
         
         
         
@@ -78,10 +86,15 @@ class HomeVC: UIViewController {
     
     fileprivate func presentLoginController(){
         let storyBoard = UIStoryboard(name: "LoginStoryBoard", bundle: nil)
-        let controller = storyBoard.instantiateViewController(withIdentifier: "logingVC")
+        let controller = storyBoard.instantiateViewController(withIdentifier: "LoginVC")
         present(controller, animated: true, completion: nil)
     }
     
+    fileprivate func presentLoggedUserVC(){
+        let storyBoard = UIStoryboard(name: "Main", bundle: nil)
+        let controller = storyBoard.instantiateViewController(withIdentifier: "LoggedUser")
+        present(controller, animated: true, completion: nil)
+    }
 //    fileprivate func presentFavoriteController(){
 //        let storyBoard = UIStoryboard(name: "LoginStoryBoard", bundle: nil)
 //        let controller = storyBoard.instantiateViewController(withIdentifier: "logingVC")
