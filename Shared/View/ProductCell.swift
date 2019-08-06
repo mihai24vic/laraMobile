@@ -30,6 +30,9 @@ class ProductCell: UITableViewCell {
         }
         productPrice.text = String(product.price)
         
+        //compare products with favorite array - if exists it is e favorite
+        
+        
         
     }
     

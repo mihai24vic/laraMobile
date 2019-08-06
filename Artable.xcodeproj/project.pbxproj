@@ -16,6 +16,7 @@
 		271DE31B2280D5EB009BF446 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 271DE31A2280D5EB009BF446 /* Extensions.swift */; };
 		271DE31D22822217009BF446 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 271DE31C22822217009BF446 /* Constants.swift */; };
 		27235DF422B2F5D800A880EA /* LoggedUserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27235DF322B2F5D800A880EA /* LoggedUserViewController.swift */; };
+		275BCAA522D7DB15007957A2 /* FavoriteVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 275BCAA422D7DB15007957A2 /* FavoriteVC.swift */; };
 		278119C5229F2E2000631389 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 278119C4229F2E2000631389 /* SWRevealViewController.m */; };
 		278119CB22A5A38E00631389 /* ProductDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 278119C922A5A38E00631389 /* ProductDetailVC.swift */; };
 		278119CC22A5A38E00631389 /* ProductDetailVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 278119CA22A5A38E00631389 /* ProductDetailVC.xib */; };
@@ -32,7 +33,6 @@
 		27A46A93226D153500298581 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 27A46A91226D153500298581 /* Main.storyboard */; };
 		27A46A98226D153600298581 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 27A46A96226D153600298581 /* LaunchScreen.storyboard */; };
 		27A46AA3226D153700298581 /* ArtableAdminTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27A46AA2226D153700298581 /* ArtableAdminTests.swift */; };
-		27A46AAE226D153700298581 /* ArtableAdminUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27A46AAD226D153700298581 /* ArtableAdminUITests.swift */; };
 		27A46ABA226D16E700298581 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 27A46A60226D147D00298581 /* Assets.xcassets */; };
 		27A46ABB226D16EA00298581 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 27A46A60226D147D00298581 /* Assets.xcassets */; };
 		27A46ABC226D16EA00298581 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 27A46A60226D147D00298581 /* Assets.xcassets */; };
@@ -99,6 +99,7 @@
 		271DE31A2280D5EB009BF446 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		271DE31C22822217009BF446 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		27235DF322B2F5D800A880EA /* LoggedUserViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LoggedUserViewController.swift; path = ../../../Downloads/LoggedUserViewController.swift; sourceTree = "<group>"; };
+		275BCAA422D7DB15007957A2 /* FavoriteVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteVC.swift; sourceTree = "<group>"; };
 		278119C2229F2E1F00631389 /* Artable-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Artable-Bridging-Header.h"; sourceTree = "<group>"; };
 		278119C3229F2E2000631389 /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWRevealViewController.h; sourceTree = "<group>"; };
 		278119C4229F2E2000631389 /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
@@ -128,8 +129,6 @@
 		27A46AA2226D153700298581 /* ArtableAdminTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtableAdminTests.swift; sourceTree = "<group>"; };
 		27A46AA4226D153700298581 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		27A46AA9226D153700298581 /* ArtableAdminUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ArtableAdminUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		27A46AAD226D153700298581 /* ArtableAdminUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtableAdminUITests.swift; sourceTree = "<group>"; };
-		27A46AAF226D153700298581 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		27A46AC1226E5C2200298581 /* LoginStoryBoard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LoginStoryBoard.storyboard; sourceTree = "<group>"; };
 		27A95B9F228226AA00BD0985 /* RoundedViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedViews.swift; sourceTree = "<group>"; };
 		27DA969B2288AC3D00080930 /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
@@ -218,6 +217,7 @@
 				271DE314227F87A5009BF446 /* RegisterVC.swift */,
 				271DE316227F87B4009BF446 /* LoginVC.swift */,
 				8878F926229F23A900B2CF4E /* TabControllerViewController.swift */,
+				275BCAA422D7DB15007957A2 /* FavoriteVC.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -286,7 +286,6 @@
 				27A46A6D226D147D00298581 /* ArtableTests */,
 				27A46A8C226D153500298581 /* ArtableAdmin */,
 				27A46AA1226D153700298581 /* ArtableAdminTests */,
-				27A46AAC226D153700298581 /* ArtableAdminUITests */,
 				27A46A57226D147900298581 /* Products */,
 				2FDAD8AF9AF1E9ABC25CFD30 /* Pods */,
 				DE3E0195BD608F365F1031B8 /* Frameworks */,
@@ -361,15 +360,6 @@
 				27A46AA4226D153700298581 /* Info.plist */,
 			);
 			path = ArtableAdminTests;
-			sourceTree = "<group>";
-		};
-		27A46AAC226D153700298581 /* ArtableAdminUITests */ = {
-			isa = PBXGroup;
-			children = (
-				27A46AAD226D153700298581 /* ArtableAdminUITests.swift */,
-				27A46AAF226D153700298581 /* Info.plist */,
-			);
-			path = ArtableAdminUITests;
 			sourceTree = "<group>";
 		};
 		27A46AB9226D157000298581 /* Shared */ = {
@@ -891,6 +881,7 @@
 				27DA96AE2289F7BA00080930 /* ProductCell.swift in Sources */,
 				271DE31D22822217009BF446 /* Constants.swift in Sources */,
 				27235DF422B2F5D800A880EA /* LoggedUserViewController.swift in Sources */,
+				275BCAA522D7DB15007957A2 /* FavoriteVC.swift in Sources */,
 				27DA969C2288AC3D00080930 /* Category.swift in Sources */,
 				8878F927229F23A900B2CF4E /* TabControllerViewController.swift in Sources */,
 			);
@@ -933,7 +924,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				27A46AAE226D153700298581 /* ArtableAdminUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

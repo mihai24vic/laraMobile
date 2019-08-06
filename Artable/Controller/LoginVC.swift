@@ -15,7 +15,7 @@ class LoginVC: UIViewController {
     
     //The login script url make sure to write the ip instead of localhost
     //you can get the ip using ifconfig command in terminal
-    let URL_USER_LOGIN = "https://stackwish.com/v1/login.php"
+    let URL_USER_LOGIN = "https://laramobile.com/v1/login.php"
     
     //the defaultvalues to store user data
     let defaultValues = UserDefaults.standard
@@ -41,8 +41,6 @@ class LoginVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        print("*************  \(String(describing: defaultValues.string(forKey: "username")))")
-        
         if defaultValues.string(forKey: "username") != ""{
           
             let storyBoard = UIStoryboard(name: "Main", bundle: nil)
@@ -54,62 +52,46 @@ class LoginVC: UIViewController {
     
     @IBAction func loginClicked(_ sender: Any) {
         print("test login clicked")
-        //        guard let email = emailTxt.text , email.isNotEmpty,
-        //            let password = passwordTxt.text , password.isNotEmpty else {return}
-        //
-        //        acitivityIndicator.startAnimating()
-        //        Auth.auth().signIn(withEmail: email, password: password) {(user, error) in
-        //            if let error = error {
-        //                debugPrint(error)
-        //                self.acitivityIndicator.stopAnimating()
-        //                return
-        //            }
-        //            self.acitivityIndicator.stopAnimating()
-        //            self.dismiss(animated: true, completion: nil)
-        //
-        //        }
-        let parameters: Parameters=[
-            "username":emailTxt.text!,
-            "password":passwordTxt.text!
+                guard let email = emailTxt.text , email.isNotEmpty,
+                   let password = passwordTxt.text , password.isNotEmpty else {return}
+        
+        acitivityIndicator.startAnimating()
+    
+        let parameters:Parameters = [
+                "username":email,
+                "password":password
         ]
         
         //making a post request
-        Alamofire.request(URL_USER_LOGIN, method: .post, parameters: parameters).responseJSON
+        Alamofire.request(URL_USER_LOGIN, method: .post, parameters: parameters, encoding: JSONEncoding.default, headers: nil).responseJSON
             {
                 response in
                 //printing response
-                print("*************  \(response)")
-                
+                print("**     *****  \(response)")
+
                 //getting the json value from the server
                 if let result = response.result.value {
                     let jsonData = result as! NSDictionary
-                    
+
                     //if there is no error
                     if(!(jsonData.value(forKey: "error") as! Bool)){
                         self.labelError.text = ""
-                        
+
                         //getting the user from response
                         let user = jsonData.value(forKey: "user") as! NSDictionary
-                        
                         //getting user values
                         let userId = user.value(forKey: "id") as! String
                         let userName = user.value(forKey: "username") as! String
                         let userEmail = user.value(forKey: "email") as! String
-                        
-                        //saving user values to defaults
-                        self.defaultValues.set(userId, forKey: "userid")
+                        self.defaultValues.set(userId, forKey: "userId")
                         self.defaultValues.set(userName, forKey: "username")
                         self.defaultValues.set(userEmail, forKey: "useremail")
-                        
-                      let laraUser = User.init(id: userId, email: userEmail, username: userName, stripeId: "")
-                        
-                        UserService.getCurrentUser()
-                        
+
                         self.presentMainController()
-                        
+                        self.acitivityIndicator.stopAnimating()
                     }else{
-                        //error message in case of invalid credential
                         self.labelError.text = "Invalid username or password"
+                        self.acitivityIndicator.stopAnimating()
                     }
                 }
         }

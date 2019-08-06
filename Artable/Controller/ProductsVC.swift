@@ -33,11 +33,6 @@ class ProductsVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         sideMenu()
-//        let product = Product.init(name: "IOS APP", id: "hgvkhgf", category: "Applications", price: 33, productDescription: "Someting nice to do in the weekends", imageURL: "https://images.unsplash.com/photo-1514873684739-6847b4301185?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1328&q=80", timesStamp: Timestamp(), stock: 0, favorite: false)
-//
-        
-        //products.append(product)
-        
         tableView.delegate = self
         tableView.dataSource = self
         tableView.register(UINib(nibName: Identifiers.ProductCell, bundle: nil), forCellReuseIdentifier: Identifiers.ProductCell)
@@ -49,9 +44,9 @@ class ProductsVC: UIViewController {
     
     func getProductsData(bulk_no : Int, parameters : [String:Any]){
         
-       let url = "http://stackwish.com/api.php/table=tbl_products/offset=\(bulk_no)"
+       let url = "http://laramobile.com/api.php/table=tbl_products/offset=\(bulk_no)"
         
-        print("Xxxxxxxxxxxx: " + url)
+        print(url)
         
         Alamofire.request(url, method: .get, parameters: nil).responseJSON{
             response in
@@ -77,25 +72,10 @@ class ProductsVC: UIViewController {
             let product = Product.init(name: "\(value["name_prd"])", id: "\(value["id_prd"])", category: "Applications", price: Double("\(value["pret_sortare"])")!, productDescription: "\(value["short_description_prd"])", imageURL: "https://laramobile.ro/pics/\(value["id_prd"])/\(pictureNumber ?? "1")r.jpg", timesStamp: Timestamp(), stock: 0, favorite: false)
             self.products.append(product)
             
-            //if indexPath.row >= bulk_no - 3 {
-                //                self.bulk_no = bulk_no + 10;
-                //                // call api
-                //                getProductsData(url: LARA_URL, parameters : params);
-                //            }
         }
         
         self.tableView.reloadData()
-        //tableView.delegate = self
-        //tableView.dataSource = self
-        //tableView.register(UINib(nibName: Identifiers.ProductCell, bundle: nil), forCellReuseIdentifier: Identifiers.ProductCell)
-        
-        //let prod = Product.init(name: "\(json[1]["name_prd"])", id: "\(json[1]["id_prd"])", category: "Home", price: Double("\(json[1]["pret_sortare"])")!, productDescription: "bau", imageURL: "\(json[1]["name_prd"])", timesStamp: Timestamp(), stock: 33, favorite: false)
-        print("PRODUCTS*")
     }
-    
-    //func fetchProductData(){
-        
-    //}
 
 }
 
