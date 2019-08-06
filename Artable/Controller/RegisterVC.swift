@@ -13,7 +13,7 @@ import Alamofire
 
 class RegisterVC : UIViewController{
     
-    let URL_USER_REGISTER = "https://stackwish.com/v1/register.php"
+    let URL_USER_REGISTER = "https://laramobile.com/v1/register.php"
     
     //the defaultvalues to store user data
     let defaultValues = UserDefaults.standard
@@ -99,12 +99,13 @@ class RegisterVC : UIViewController{
                     //if there is no error
                     if(!(jsonData.value(forKey: "error") as! Bool))
                     {
-                        
+                        print("JSONDATA --->")
+                        print(jsonData)
                         //getting the user from response
                         let user = jsonData.value(forKey: "user") as! NSDictionary
                         
                         //getting user values
-                        let userId = user.value(forKey: "id") as! String
+                        let userId = user.value(forKey: "id") as! Int
                         let userName = user.value(forKey: "username") as! String
                         let userEmail = user.value(forKey: "email") as! String
                         
@@ -117,13 +118,9 @@ class RegisterVC : UIViewController{
                         self.presentMainController()
                         
                     }else{
-                        //error message in case of invalid credential
-                        //self.labelError.text = "Error"
                     }
                 }
         }
-        //            self.activityIndicator.stopAnimating()
-        //            self.dismiss(animated: true, completion: nil)
     }
     
     fileprivate func presentMainController(){

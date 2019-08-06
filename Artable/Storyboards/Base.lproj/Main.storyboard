@@ -297,13 +297,22 @@
             </objects>
             <point key="canvasLocation" x="-1530" y="-1679"/>
         </scene>
-        <!--View Controller-->
+        <!--FavoriteVC-->
         <scene sceneID="AUS-Wf-zam">
             <objects>
-                <viewController id="u1w-EY-TE9" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="FavoriteVC" id="u1w-EY-TE9" customClass="FavoriteVC" customModule="Artable" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="2tA-AL-dVy">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="nimic" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7iC-BW-Azm">
+                                <rect key="frame" x="143" y="123" width="41" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="zJx-rm-FBl"/>
                     </view>
@@ -311,7 +320,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wRU-NR-Ikj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1300" y="-1128.3482142857142"/>
+            <point key="canvasLocation" x="1630" y="-1133"/>
         </scene>
         <!--Logged User View Controller-->
         <scene sceneID="xn7-r6-l6U">

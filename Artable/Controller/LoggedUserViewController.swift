@@ -10,6 +10,23 @@ import UIKit
 
 class LoggedUserViewController: UIViewController {
     
+    @IBAction func personalDataButtonPressed(_ sender: Any) {
+         
+    }
+    
+    @IBAction func orderHistoryButtonPressed(_ sender: Any) {
+        
+    }
+    
+    @IBAction func favoriteButtonPressed(_ sender: Any) {
+        
+    }
+    
+//    @IBAction func backButtonPressed(_ sender: Any) {
+//        
+//    }
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -18,10 +35,7 @@ class LoggedUserViewController: UIViewController {
     
     @IBAction func logout(_ sender: Any) {
         
-        let domain = Bundle.main.bundleIdentifier!
-        UserDefaults.standard.removePersistentDomain(forName: domain)
-        UserDefaults.standard.synchronize()
-        
+        UserService.logoutUser()
         presentMainController()
     }
     
